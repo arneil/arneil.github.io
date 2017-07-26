@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Alexander Neilson </title>
+</head>
+<style>
+
+canvas {
+  position: fixed; 
+  left: 0px; 
+  top: 0px;
+  z-index: -1;
+  background-color: black;
+}
+
+ul {
+    font: 15px arial, sans-serif;
+    list-style-type: none;
+    margin: 5px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    font: "Arial";
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+li {
+    border-right: 1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+
+
+.active {
+    background-color: #4CAF50;
+}
+
+.buttons {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border: 2px solid red;
+  background: white;
+  font-weight: bold;
+  padding: 1em;
+}
+
+.buttons button {
+  border: 2px solid red;
+  background: white;
+}
+
+.textbox {
+  border: 2px solid black;
+  font-family: 'Overpass Mono', monospace;
+  font-size: 14px;
+  line-height: 1.1;
+  background: rgba(100,100,100,0.95);
+  margin: 5px;
+  padding: 1em;
+  width: 400px;
+  display: none;
+}
+
+</style>
+
+<body>
+
+<link href="https://fonts.googleapis.com/css?family=Overpass+Mono" rel="stylesheet">
+
+<canvas id="myCanvas" width="480" height="320"></canvas>
+
+<ul>
+  <li><a href="#home" onclick="reveal('home')">Home</a></li>
+  <li><a href="#news" onclick="reveal('news')">News</a></li>
+  <li><a href="#contact" onclick="reveal('contact')">Contact</a></li>
+  <li style="float:right"><a class="active" href="#about">About</a>
+</ul>
+
+<div class="buttons">
+  <button id="test1"> test1 </button>
+  <button id="test2"> test2 </button>
+  <button id="gol"> gol </button>
+</div>
+
+<div id="home" class="textbox">
+  HOME HOME HOME Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel venenatis dolor. Nunc a velit nibh. Praesent hendrerit sed justo sit amet luctus. Mauris ut sapien ligula. Nulla eu lorem quis sapien elementum pulvinar vel eget tellus. Phasellus nec feugiat nisi, pharetra fringilla ipsum. Etiam vel ligula euismod, tincidunt odio a, venenatis quam. Sed lobortis a lacus et viverra. Curabitur blandit velit quis lorem viverra iaculis. Sed ipsum turpis, condimentum vitae bibendum non, feugiat ac mauris. Mauris condimentum ligula ut nunc faucibus porttitor. Donec tempor condimentum ipsum, quis pretium massa finibus ut. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</div>
+
+<div id="news" class="textbox">
+  NEWS NEWS NEWS Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel venenatis dolor. Nunc a velit nibh. Praesent hendrerit sed justo sit amet luctus. Mauris ut sapien ligula. Nulla eu lorem quis sapien elementum pulvinar vel eget tellus. Phasellus nec feugiat nisi, pharetra fringilla ipsum. Etiam vel ligula euismod, tincidunt odio a, venenatis quam. Sed lobortis a lacus et viverra. Curabitur blandit velit quis lorem viverra iaculis. Sed ipsum turpis, condimentum vitae bibendum non, feugiat ac mauris. Mauris condimentum ligula ut nunc faucibus porttitor. Donec tempor condimentum ipsum, quis pretium massa finibus ut. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</div>
+
+<div id="contact" class="textbox">
+  CONTACT CONTACT CONTACT Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel venenatis dolor. Nunc a velit nibh. Praesent hendrerit sed justo sit amet luctus. Mauris ut sapien ligula. Nulla eu lorem quis sapien elementum pulvinar vel eget tellus. Phasellus nec feugiat nisi, pharetra fringilla ipsum. Etiam vel ligula euismod, tincidunt odio a, venenatis quam. Sed lobortis a lacus et viverra. Curabitur blandit velit quis lorem viverra iaculis. Sed ipsum turpis, condimentum vitae bibendum non, feugiat ac mauris. Mauris condimentum ligula ut nunc faucibus porttitor. Donec tempor condimentum ipsum, quis pretium massa finibus ut. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</div>
+
+
+<!-- <canvas id="myCanvas" style="position: absolute; left: 0px; top: 0px;"></canvas> -->
+
+<script src="widgets.js"></script>
+
+</body>
+</html>
