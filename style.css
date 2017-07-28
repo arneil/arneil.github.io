@@ -1,0 +1,79 @@
+body, html {
+    font: 14px 'Ubuntu', sans-serif;
+    color: white;
+}
+
+h2 {
+    font: 18px 'Ubuntu', sans-serif;
+    margin: 0px;
+}
+
+h3 {
+    font: 30px 'Rokkitt', serif;
+    font-weight: 600;
+    color: silver;
+    border-bottom: 1px solid silver;
+    margin: 0px 0px 15px 0px;
+}
+
+.menubar {
+    font: 15px "Ubuntu", sans-serif;
+    list-style-type: none;
+    margin: 5px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #666;
+}
+
+.menubar li {
+    float: left;
+}
+
+.menubar li a {
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menubar li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.menubar li {
+    border-right: 1px solid #bbb;
+}
+
+.menubar li:last-child {
+    border-right: none;
+}
+
+.textbox {
+    background-color: rgba(100, 100, 100, .33);
+    margin: 0px;
+    border-color: rgba(100, 100, 100, .33);
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+    width: 400px;
+}
+
+.textarea {
+    border: 1px solid silver;
+    background-color: rgba(10, 10, 10, .80);
+    padding: 14px;
+}
+
+.close {
+    width: 20px;
+    height: 20px;
+    border: 1px solid silver;
+    background: transparent;
+    margin: 0px;
+    padding: 2px;
+    color: darkred;
+    font-size: 12px;
+    float: right;
+}

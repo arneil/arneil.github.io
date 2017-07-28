@@ -224,11 +224,16 @@ function initialize() {
 }
 
 function reveal(toReveal) {
-	oldbox = document.getElementById(currentTextbox);
-	oldbox.style.display = 'none';
-	newbox = document.getElementById(toReveal);
-	newbox.style.display = 'block';
-	currentTextbox = toReveal;
+	if (toReveal == 'none') {
+		box = document.getElementById(currentTextbox);
+		box.style.display = 'none';
+	} else {
+		oldbox = document.getElementById(currentTextbox);
+		oldbox.style.display = 'none';
+		newbox = document.getElementById(toReveal);
+		newbox.style.display = 'block';
+		currentTextbox = toReveal;
+	}
 }
 
 function resizeCanvas() {
