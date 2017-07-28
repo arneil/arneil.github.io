@@ -6,13 +6,17 @@ var widget = test1;
 var currentTextbox = "home";
 var mousePos = [0,0];
 var keyPress = 0;
+var infoToggle = false;
 
 /* =-=-=-=-= WIDGETS =-=-=-=-=
-All widgets must include a draw() function.
+All widgets must include a draw() function and an id string consistent with references in html.
 */
+
+
 
 class Test1 {
 	constructor(x, y, dx, dy) {
+		this.id = 'test1';
 		this.x = x;
 		this.y = y;
 		this.dx = dx;
@@ -45,6 +49,7 @@ class GOL {
 
 	constructor() {
 
+		this.id = 'gol';
 		//initial density, as a percentage of empty space
 		this.density = .66;
 		//cells change color over their lifetime
@@ -200,6 +205,7 @@ class GOL {
 */
 
 function begin(Target, args) {
+	infoOff();
 	toBegin = new Target(...args);
 	widget = toBegin;
 }
@@ -234,6 +240,31 @@ function reveal(toReveal) {
 		newbox.style.display = 'block';
 		currentTextbox = toReveal;
 	}
+}
+
+function info() {
+	infobox = document.getElementById(widget.id + "Info");
+	infobutton = document.getElementById("info");
+	if(infoToggle) {
+		infobox.style.display = 'none';
+		infobutton.style.background = "url('icons/qmark.png')";
+		infobutton.style.backgroundSize = 'contain';
+		infoToggle = false;
+	} else {
+		infobox.style.display = 'block';
+		infobutton.style.background = "url('icons/qmark-inv.png')";
+		infobutton.style.backgroundSize = 'contain';
+		infoToggle = true;
+	}
+}
+
+function infoOff() {
+	infobox = document.getElementById(widget.id + "Info");
+	infobutton = document.getElementById("info");
+	infobox.style.display = 'none';
+	infobutton.style.background = "url('icons/qmark.png')";
+	infobutton.style.backgroundSize = 'contain';
+	infoToggle = false;
 }
 
 function resizeCanvas() {

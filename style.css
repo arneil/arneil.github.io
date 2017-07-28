@@ -15,6 +15,20 @@ h3 {
     margin: 0px;
 }
 
+h4 {
+    font: 20px 'Rokkitt', erif;
+    font-weight: 200;
+    color: silver;
+    border-bottom: 1px solid silver;
+    margin: 0px 0px 10px 0px;
+}
+
+p {
+    line-height: 1.3em;
+    word-spacing: 0.15em;
+    margin-left: 20px;
+}
+
 .menubar {
     font: 15px "Ubuntu", sans-serif;
     list-style-type: none;
@@ -49,7 +63,7 @@ h3 {
 
 }
 
-.textbox {
+.textBox {
     background-color: rgba(100, 100, 100, .33);
     margin: 10px 0px;
     border-color: rgba(100, 100, 100, .33);
@@ -59,7 +73,7 @@ h3 {
     width: 400px;
 }
 
-.textarea {
+.textArea {
     border: 1px solid silver;
     background-color: rgba(10, 10, 10, .80);
     padding: 14px;

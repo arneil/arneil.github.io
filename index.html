@@ -21,17 +21,28 @@ canvas {
   position: fixed;
   bottom: 0;
   right: 0;
+  margin: 8px;
+  width: 200px;
+}
+
+.buttonArea {
   background: rgba(50, 50, 50, .66);
   border-color: rgba(50, 50, 50, .33);
   border-radius: 10px;
   padding: 10px 15px;
 }
 
-.widgetArea button {
+.buttonArea button {
   margin: 2px;
   border: 1px solid silver;
   height: 30px;
   width: 30px;
+}
+
+.buttonArea #info {
+  border-radius: 15px; 
+  background: url('icons/qmark.png'); 
+  background-size: contain;
 }
 
 </style>
@@ -48,40 +59,65 @@ canvas {
 </ul>
 
 <div class="widgetArea">
-  <button id="info" style="border-radius: 15px; background: url('icons/qmark.png'); background-size: contain;"></button>
-  <button id="test1"></button>
-  <button id="test2"></button>
-  <button id="gol" style="background: url('icons/gol.png');"></button>
-</div>
-
-<div id="home" class="textbox">
-  <div class="textarea">
-    <div style="border-bottom: 1px solid silver; margin-bottom: 20px;">
-      <button class="close" onclick="reveal('none')"></button>
-      <h3> Home </h3>
+  <div  id="test1Info" class="textBox" style="width: 90%">
+    <div class="textArea">
+      <h4>Test 1</h4>
+      Here is some informative text for test 1.
     </div>
-    HOME HOME HOME Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel venenatis dolor. Nunc a velit nibh. Praesent hendrerit sed justo sit amet luctus. Mauris ut sapien ligula. Nulla eu lorem quis sapien elementum pulvinar vel eget tellus. Phasellus nec feugiat nisi, pharetra fringilla ipsum. Etiam vel ligula euismod, tincidunt odio a, venenatis quam. Sed lobortis a lacus et viverra. Curabitur blandit velit quis lorem viverra iaculis. Sed ipsum turpis, condimentum vitae bibendum non, feugiat ac mauris. Mauris condimentum ligula ut nunc faucibus porttitor. Donec tempor condimentum ipsum, quis pretium massa finibus ut. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  </div>
+  <div id="test2Info" class="textBox" style="width: 90%">
+    <div class="textArea">
+      <h4>Test 2</h4>
+      Here is some informative text for test 2.
+    </div>
+  </div>
+  <div id="golInfo" class="textBox" style="width: 90%">
+    <div class="textArea">
+      <h4>The Game of Life</h4>
+        The Game of Life is a simulation meant to show how by applying just four rules one can create complex patterns that can persist and even reproduce. Read more <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">here</a>.
+    </div>
+  </div>
+  <div class="buttonArea">
+    <button id="info" onclick="info()"></button>
+    <button id="test1"></button>
+    <button id="test2"></button>
+    <button id="gol" style="background: url('icons/gol.png');"></button>
   </div>
 </div>
 
-<div id="news" class="textbox">
-  <div class="textarea">
+<div id="home" class="textBox">
+  <div class="textArea">
+    <div style="border-bottom: 1px solid silver; margin-bottom: 20px;">
+      <button class="close" onclick="reveal('none')"></button>
+      <h3> Welcome </h3>
+    </div>
+      <p> Welcome to the personal website of Alex Neilson. Feel free to play with my javascript canvas widgets, check out my resume, or shoot me an email with any questions you might have. This site is coded from scratch, so go ahead and poke around in my source.</p>
+      <p> This site is still under construction, so please pardon my mess. </p>
+  </div>
+</div>
+
+<div id="news" class="textBox">
+  <div class="textArea">
     <div style="border-bottom: 1px solid silver; margin-bottom: 20px;">
       <button class="close" onclick="reveal('none')"></button>
       <h3> News </h3>
     </div>
-    NEWS NEWS NEWS Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel venenatis dolor. Nunc a velit nibh. Praesent hendrerit sed justo sit amet luctus. Mauris ut sapien ligula. Nulla eu lorem quis sapien elementum pulvinar vel eget tellus. Phasellus nec feugiat nisi, pharetra fringilla ipsum. Etiam vel ligula euismod, tincidunt odio a, venenatis quam. Sed lobortis a lacus et viverra. Curabitur blandit velit quis lorem viverra iaculis. Sed ipsum turpis, condimentum vitae bibendum non, feugiat ac mauris. Mauris condimentum ligula ut nunc faucibus porttitor. Donec tempor condimentum ipsum, quis pretium massa finibus ut. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    <p>NEWS NEWS NEWS Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel venenatis dolor. Nunc a velit nibh. Praesent hendrerit sed justo sit amet luctus. Mauris ut sapien ligula. Nulla eu lorem quis sapien elementum pulvinar vel eget tellus. Phasellus nec feugiat nisi, pharetra fringilla ipsum. Etiam vel ligula euismod, tincidunt odio a, venenatis quam. Sed lobortis a lacus et viverra. Curabitur blandit velit quis lorem viverra iaculis. Sed ipsum turpis, condimentum vitae bibendum non, feugiat ac mauris. Mauris condimentum ligula ut nunc faucibus porttitor. Donec tempor condimentum ipsum, quis pretium massa finibus ut. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
   </div>
 </div>
 
-<div id="contact" class="textbox">
-  <div class="textarea">
+<div id="contact" class="textBox">
+  <div class="textArea">
     <div style="border-bottom: 1px solid silver; margin-bottom: 20px;">
       <button class="close" onclick="reveal('none')"></button>
       <h3> Contact </h3>
     </div>
-    CONTACT CONTACT CONTACT Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel venenatis dolor. Nunc a velit nibh. Praesent hendrerit sed justo sit amet luctus. Mauris ut sapien ligula. Nulla eu lorem quis sapien elementum pulvinar vel eget tellus. Phasellus nec feugiat nisi, pharetra fringilla ipsum. Etiam vel ligula euismod, tincidunt odio a, venenatis quam. Sed lobortis a lacus et viverra. Curabitur blandit velit quis lorem viverra iaculis. Sed ipsum turpis, condimentum vitae bibendum non, feugiat ac mauris. Mauris condimentum ligula ut nunc faucibus porttitor. Donec tempor condimentum ipsum, quis pretium massa finibus ut. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-  </dv>
+    <ul>
+      <li><a> Email: arexneil@sonic.net </a></li>
+      <li><a> LinkedIn: arexneil@sonic.net </a></li>
+      <li><a> Phone: (707) 239-1663 </a></li>
+      <li><a> Resume: here</a></li>
+  </div>
 </div>
 
 
