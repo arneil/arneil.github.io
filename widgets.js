@@ -265,6 +265,7 @@ function infoOff() {
 	infobutton.style.background = "url('icons/qmark.png')";
 	infobutton.style.backgroundSize = 'contain';
 	infoToggle = false;
+	//how about this comment
 }
 
 function resizeCanvas() {
