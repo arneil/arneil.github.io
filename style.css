@@ -12,21 +12,22 @@ h3 {
     font: 30px 'Rokkitt', serif;
     font-weight: 600;
     color: silver;
-    border-bottom: 1px solid silver;
-    margin: 0px 0px 15px 0px;
+    margin: 0px;
 }
 
 .menubar {
     font: 15px "Ubuntu", sans-serif;
     list-style-type: none;
-    margin: 5px;
+    margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #666;
+    background-color: rgba(50, 50, 50, .95);
+    border-radius: 10px;
 }
 
 .menubar li {
     float: left;
+    border-right: 1px solid silver;
 }
 
 .menubar li a {
@@ -42,17 +43,15 @@ h3 {
     background-color: #111;
 }
 
-.menubar li {
-    border-right: 1px solid #bbb;
-}
-
 .menubar li:last-child {
     border-right: none;
+    border-left: 1px solid silver;
+
 }
 
 .textbox {
     background-color: rgba(100, 100, 100, .33);
-    margin: 0px;
+    margin: 10px 0px;
     border-color: rgba(100, 100, 100, .33);
     border-radius: 5px;
     padding: 10px;
@@ -67,13 +66,11 @@ h3 {
 }
 
 .close {
-    width: 20px;
-    height: 20px;
-    border: 1px solid silver;
-    background: transparent;
-    margin: 0px;
-    padding: 2px;
-    color: darkred;
-    font-size: 12px;
+    width: 15px;
+    height: 15px;
+    border: transparent;
+    background: url("icons/redx.png");
+    background-size: 15px 15px;
+    margin: 6px;
     float: right;
 }

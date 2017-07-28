@@ -17,19 +17,21 @@ canvas {
   background-color: black;
 }
 
-.buttons {
+.widgetArea {
   position: fixed;
   bottom: 0;
   right: 0;
-  border: 2px solid red;
-  background: white;
-  font-weight: bold;
-  padding: 1em;
+  background: rgba(50, 50, 50, .66);
+  border-color: rgba(50, 50, 50, .33);
+  border-radius: 10px;
+  padding: 10px 15px;
 }
 
-.buttons button {
-  border: 2px solid red;
-  background: white;
+.widgetArea button {
+  margin: 2px;
+  border: 1px solid silver;
+  height: 30px;
+  width: 30px;
 }
 
 </style>
@@ -45,32 +47,39 @@ canvas {
   <li style="float:right"><a href="webres.html"><h2>Resume</h2></a>
 </ul>
 
-<div class="buttons">
-  <button id="test1"> test1 </button>
-  <button id="test2"> test2 </button>
-  <button id="gol"> gol </button>
+<div class="widgetArea">
+  <button id="info" style="border-radius: 15px; background: url('icons/qmark.png'); background-size: contain;"></button>
+  <button id="test1"></button>
+  <button id="test2"></button>
+  <button id="gol" style="background: url('icons/gol.png');"></button>
 </div>
 
 <div id="home" class="textbox">
   <div class="textarea">
-    <h3> Home </h3>
-    <button class="close" onclick="reveal('none')"> X </button>
+    <div style="border-bottom: 1px solid silver; margin-bottom: 20px;">
+      <button class="close" onclick="reveal('none')"></button>
+      <h3> Home </h3>
+    </div>
     HOME HOME HOME Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel venenatis dolor. Nunc a velit nibh. Praesent hendrerit sed justo sit amet luctus. Mauris ut sapien ligula. Nulla eu lorem quis sapien elementum pulvinar vel eget tellus. Phasellus nec feugiat nisi, pharetra fringilla ipsum. Etiam vel ligula euismod, tincidunt odio a, venenatis quam. Sed lobortis a lacus et viverra. Curabitur blandit velit quis lorem viverra iaculis. Sed ipsum turpis, condimentum vitae bibendum non, feugiat ac mauris. Mauris condimentum ligula ut nunc faucibus porttitor. Donec tempor condimentum ipsum, quis pretium massa finibus ut. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
   </div>
 </div>
 
 <div id="news" class="textbox">
   <div class="textarea">
-    <h3> News </h3>
-    <button class="close" onclick="reveal('none')"> X </button>
+    <div style="border-bottom: 1px solid silver; margin-bottom: 20px;">
+      <button class="close" onclick="reveal('none')"></button>
+      <h3> News </h3>
+    </div>
     NEWS NEWS NEWS Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel venenatis dolor. Nunc a velit nibh. Praesent hendrerit sed justo sit amet luctus. Mauris ut sapien ligula. Nulla eu lorem quis sapien elementum pulvinar vel eget tellus. Phasellus nec feugiat nisi, pharetra fringilla ipsum. Etiam vel ligula euismod, tincidunt odio a, venenatis quam. Sed lobortis a lacus et viverra. Curabitur blandit velit quis lorem viverra iaculis. Sed ipsum turpis, condimentum vitae bibendum non, feugiat ac mauris. Mauris condimentum ligula ut nunc faucibus porttitor. Donec tempor condimentum ipsum, quis pretium massa finibus ut. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
   </div>
 </div>
 
 <div id="contact" class="textbox">
   <div class="textarea">
-    <h3> Contact </h3>
-    <button class="close" onclick="reveal('none')"> X </button>
+    <div style="border-bottom: 1px solid silver; margin-bottom: 20px;">
+      <button class="close" onclick="reveal('none')"></button>
+      <h3> Contact </h3>
+    </div>
     CONTACT CONTACT CONTACT Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel venenatis dolor. Nunc a velit nibh. Praesent hendrerit sed justo sit amet luctus. Mauris ut sapien ligula. Nulla eu lorem quis sapien elementum pulvinar vel eget tellus. Phasellus nec feugiat nisi, pharetra fringilla ipsum. Etiam vel ligula euismod, tincidunt odio a, venenatis quam. Sed lobortis a lacus et viverra. Curabitur blandit velit quis lorem viverra iaculis. Sed ipsum turpis, condimentum vitae bibendum non, feugiat ac mauris. Mauris condimentum ligula ut nunc faucibus porttitor. Donec tempor condimentum ipsum, quis pretium massa finibus ut. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
   </dv>
 </div>
